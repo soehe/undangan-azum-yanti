@@ -12,7 +12,7 @@
 <audio id="bgMusic" loop preload="none" src="musik.mp3"></audio>
 <script>
 /* GANTI nomor contoh ini dengan nomor WhatsApp tuan rumah: kode negara tanpa + atau spasi. */
-const WHATSAPP_NUMBER="62885883599493";const music=document.getElementById('bgMusic'),musicBtn=document.getElementById('musicBtn');
+const WHATSAPP_NUMBER="6285883599493";const music=document.getElementById('bgMusic'),musicBtn=document.getElementById('musicBtn');
 musicBtn.addEventListener('click',async()=>{try{if(music.paused){await music.play();musicBtn.textContent='♫ Jeda Musik'}else{music.pause();musicBtn.textContent='♫ Putar Musik'}}catch(e){alert('Tambahkan file musik.mp3 ke repositori agar musik bisa diputar.')}});
 function sendWA(msg){if(WHATSAPP_NUMBER==='6281234567890'){alert('Ganti nomor contoh 6281234567890 di kode dengan nomor WhatsApp tuan rumah.');return}window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg),'_blank','noopener')}
 document.getElementById('rsvpForm').addEventListener('submit',e=>{e.preventDefault();sendWA('RSVP Undangan Azum & Yanti\nNama: '+document.getElementById('guest').value+'\nKehadiran: '+document.getElementById('attendance').value+'\nJumlah tamu: '+document.getElementById('count').value)});
